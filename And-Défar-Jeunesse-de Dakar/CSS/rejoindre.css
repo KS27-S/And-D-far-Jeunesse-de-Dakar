@@ -1,0 +1,75 @@
+body > section {
+  width: min(100%, 640px);
+  margin: clamp(24px, 5vw, 50px) auto;
+  padding: 0 clamp(12px, 4vw, 24px);
+}
+
+body > section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.champ {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-family: fantasy;
+}
+
+.champ label {
+  width: 180px;
+  max-width: 100%;
+  font-weight: 500;
+  color: #444;
+}
+
+.champ input {
+  flex: 1 1 180px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.envoyer {
+  margin-top: 20px;
+  margin-left: 180px;
+}
+
+.envoyer input[type="submit"] {
+  padding: 9px 24px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.envoyer input[type="submit"]:hover {
+  background-color: #07cc52;
+}
+
+@media (max-width: 600px) {
+  .champ {
+    align-items: stretch;
+  }
+
+  .champ label {
+    width: 100%;
+  }
+
+  .champ input {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .envoyer {
+    margin-left: 0;
+  }
+}
